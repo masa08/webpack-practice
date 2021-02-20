@@ -59,6 +59,10 @@ module.exports = {
           publicPath: '/images',
         },
       },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
     ]
   },
   plugins: [
