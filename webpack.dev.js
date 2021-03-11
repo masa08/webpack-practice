@@ -3,7 +3,7 @@ const commonConfig = require('./webpack.common.js');
 const path = require('path');
 
 module.exports = merge(commonConfig, {
-  mode: "development",
+  mode: 'development',
   watch: true,
   devtool: 'cheap-module-eval-source-map',
   devServer: {

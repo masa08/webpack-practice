@@ -27,7 +27,7 @@ module.exports = {
           minSize: 0,
           minChunks: 2,
         },
-      }
+      },
     },
   },
   module: {
@@ -48,7 +48,12 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(jpe?g|gif|png|svg)$/,
@@ -68,7 +73,7 @@ module.exports = {
         test: /\.html$/,
         loader: 'html-loader',
       },
-    ]
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -84,5 +89,5 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: './css/[name].[contenthash].css',
     }),
-  ]
-}
+  ],
+};
